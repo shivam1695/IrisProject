@@ -1,0 +1,12 @@
+<StackLayout >
+  <Image src="res://download" stretch="none" horizontalAlignment="center"></Image>
+
+  <TextField hint="Full Name" ></TextField>
+  <DatePicker #datePicker (loaded)="configure(datePicker)" verticalAlignment="center"></DatePicker>
+  <TextField hint="Email Address" keyboardType="email" 
+    autocorrect="false" autocapitalizationType="none"></TextField>
+  <TextField hint="Phone Number" secure="true" ></TextField>
+
+  <Button text="Register Now" class="submit-button"></Button>
+  <Button text="Reset"></Button>
+</StackLayout>

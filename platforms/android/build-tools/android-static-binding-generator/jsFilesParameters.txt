@@ -1,0 +1,4 @@
+/home/shivam/IrisProject/platforms/android/src/main/assets/app/app.module.js
+/home/shivam/IrisProject/platforms/android/src/main/assets/app/register/register.component.js
+/home/shivam/IrisProject/platforms/android/src/main/assets/app/shared/user/user.js
+/home/shivam/IrisProject/platforms/android/src/main/assets/app/app.component.js
