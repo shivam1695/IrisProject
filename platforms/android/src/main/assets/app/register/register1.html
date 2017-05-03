@@ -1,0 +1,10 @@
+<StackLayout >
+  <Image src="res://download" stretch="none" horizontalAlignment="center"></Image>
+
+  <TextField hint="Email" [(ngModel)]='user.email' #email='ngModel' pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" required></TextField>
+  <Label class="validation" [visibility]="email.valid||email.pristine ? 'collapse' : 'visible'" text="Enter valid email-id" ></Label>
+  
+  <Button text="Next" class="submit-button" (tap)='save1()' [nsRouterLink]="['/register2']"></Button>
+  <Button text="Back" [nsRouterLink]="['/register']"></Button>
+  <Button text="Reset" (tap)='clear()' ></Button>
+</StackLayout>

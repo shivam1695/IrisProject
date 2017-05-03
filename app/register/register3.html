@@ -1,0 +1,8 @@
+<StackLayout >
+  <Image src="res://download" stretch="none" horizontalAlignment="center"></Image>
+  <TextField hint="Phone" [(ngModel)]='user.email' #phone='ngModel' required></TextField>
+  <Label class="validation" [visibility]="phone.valid||phone.pristine ? 'collapse' : 'visible'" text="Name is required" ></Label> 
+  <Button text="Register Now" class="submit-button" (tap)='save3()'></Button>
+  <Button text="Back" [nsRouterLink]="['/register2']"></Button>
+  <Button text="Reset" (tap)='clear()' ></Button>
+</StackLayout>

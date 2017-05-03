@@ -1,23 +1,29 @@
-import { Component ,OnInit} from "@angular/core";
+import { Component, ViewChild ,OnInit,ElementRef} from "@angular/core";
 import { User } from "../shared/user/user";
 import { DatePicker } from "ui/date-picker";
+import { Progress } from "ui/progress";
+import * as applicationSettings from "application-settings";
+
 
 @Component({
   selector: "register",
-  templateUrl:"register/register.html" 
+  templateUrl:"register/register.html",
+  styleUrls:["register/register.css"]
 })
 export class RegisterComponent implements OnInit{
-    user:User;
+    user:User ;
+
     ngOnInit(){
-
+        this.user = {email:'',
+        name:applicationSettings.getString('name')!=null?applicationSettings.getString('name'):null,
+        bdate:'',phone:''}; 
     }
 
-    configure(datePicker: DatePicker) {
-        datePicker.year = 1980;
-        datePicker.month = 2;
-        datePicker.day = 9;
-        datePicker.minDate = new Date(1975, 0, 29);
-        datePicker.maxDate = new Date(2045, 4, 12);
+    save(){
+        applicationSettings.setString('name',this.user.name);
+        
     }
+
+   
   
 }

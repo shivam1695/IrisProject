@@ -8,13 +8,26 @@ Image {
   margin-top: 5;
   margin-bottom: 20;
 }
-Button, TextField {
+Button, TextField, Label {
   margin-left: 16;
   margin-right: 16;
   margin-bottom: 10;
 }
+
 .submit-button {
   background-color: #CB1D00;
   color: white;
   margin-top: 20;
+}
+
+.ng-valid[required] {
+    border-left-color: #42A948; 
+    border-left-width: 3;
+}
+.ng-invalid {
+    border-left-color: #a94442; 
+    border-left-width: 3;
+}
+.validation {
+    color: #a94442;
 }

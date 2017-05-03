@@ -4,13 +4,14 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NativeScriptHttpModule } from "nativescript-angular/http";
 import { ModalDialogService } from "nativescript-angular/modal-dialog";
 import { AppComponent } from "./app.component";
-import {RegisterComponent} from "../app/register/register.component"
+import { NativeScriptRouterModule } from "nativescript-angular/router";
+import { routes, navigatableComponents } from "./app.routing";
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent],
+  declarations: [AppComponent,...navigatableComponents],
   bootstrap: [AppComponent],
   imports: [NativeScriptModule,NativeScriptFormsModule,
-    NativeScriptHttpModule],
+    NativeScriptHttpModule,NativeScriptRouterModule,NativeScriptRouterModule.forRoot(routes)],
   schemas: [NO_ERRORS_SCHEMA],
   providers:[ModalDialogService]
 })
